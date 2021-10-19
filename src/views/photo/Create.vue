@@ -33,19 +33,21 @@ export default {
   },
   methods: {
     onFileChange(e) {
-       this.image = e.target.files[0];
-     },
+      this.image = e.target.files[0];
+    },
     async submitCreate() {
-       const s3key = new Date().getTime().toString(16) + this.image.name;
-       await Storage.put(s3key, this.image, {
-         level: "private",
-       })
+      const s3key = new Date().getTime().toString(16) + this.image.name;
+
+      await Storage.put(s3key, this.image, {
+        level: "private",
+      })
         .then((result) => {
-           this.form.s3key = result.key;
-         })
-         .catch((error) => {
-           console.log(error);
-         });
+          this.form.s3key = result.key;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
       await API.graphql({
         query: createPhoto,
         variables: { input: this.form },

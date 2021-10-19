@@ -1,14 +1,14 @@
 {
   "projectName": "amplifyvuealbum",
-  "version": "3.1",
+  "version": "3.0",
   "frontend": "javascript",
   "javascript": {
     "framework": "vue",
     "config": {
       "SourceDir": "src",
       "DistributionDir": "dist",
-      "BuildCommand": "npm.cmd run-script build",
-      "StartCommand": "npm.cmd run-script serve"
+      "BuildCommand": "npm run build",
+      "StartCommand": "npm run serve"
     }
   },
   "providers": [

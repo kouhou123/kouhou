@@ -1,29 +1,10 @@
 {
   "auth": {
-    "amplifyvuealbum9aa4134a": {
+    "amplifyvuealbum921b97fd": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
-      "customAuth": false,
-      "frontendAuthConfig": {
-        "loginMechanisms": [
-          "PREFERRED_USERNAME"
-        ],
-        "signupAttributes": [
-          "EMAIL"
-        ],
-        "passwordProtectionSettings": {
-          "passwordPolicyMinLength": 8,
-          "passwordPolicyCharacters": []
-        },
-        "mfaConfiguration": "OFF",
-        "mfaTypes": [
-          "SMS"
-        ],
-        "verificationMechanisms": [
-          "EMAIL"
-        ]
-      }
+      "customAuth": false
     }
   },
   "api": {
@@ -35,7 +16,7 @@
           "defaultAuthentication": {
             "authenticationType": "AMAZON_COGNITO_USER_POOLS",
             "userPoolConfig": {
-              "userPoolId": "authamplifyvuealbum9aa4134a"
+              "userPoolId": "authamplifyvuealbum921b97fd"
             }
           },
           "additionalAuthenticationProviders": []
@@ -47,6 +28,13 @@
     "amplifyvuealbum": {
       "service": "S3",
       "providerPlugin": "awscloudformation"
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "type": "cicd",
+      "lastPushTimeStamp": "2021-04-13T23:17:04.535Z"
     }
   }
 }

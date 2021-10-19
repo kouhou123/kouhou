@@ -7,11 +7,11 @@ import aws_exports from './aws-exports';
 import {
   applyPolyfills,
   defineCustomElements,
- } from '@aws-amplify/ui-components/loader';
+} from '@aws-amplify/ui-components/loader';
 
- Amplify.configure(aws_exports);
- applyPolyfills().then(() => {
-   defineCustomElements(window);
- });
+Amplify.configure(aws_exports);
+applyPolyfills().then(() => {
+  defineCustomElements(window);
+});
 
 createApp(App).use(store).use(router).mount('#app')

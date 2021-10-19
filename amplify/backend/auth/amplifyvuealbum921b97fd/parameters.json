@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "amplifyvuealbum9aa4134a_identitypool_9aa4134a",
+    "identityPoolName": "amplifyvuealbum921b97fd_identitypool_921b97fd",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "amplif9aa4134a",
-    "userPoolName": "amplifyvuealbum9aa4134a_userpool_9aa4134a",
+    "resourceNameTruncated": "amplif921b97fd",
+    "userPoolName": "amplifyvuealbum921b97fd_userpool_921b97fd",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -20,8 +20,7 @@
     "requiredAttributes": [
         "email"
     ],
-    "aliasAttributes": [],
-    "userpoolClientGenerateSecret": false,
+    "userpoolClientGenerateSecret": true,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [
         "email"
@@ -29,10 +28,10 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "amplif9aa4134a_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "amplif921b97fd_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "9aa4134a",
-    "resourceName": "amplifyvuealbum9aa4134a",
+    "sharedId": "921b97fd",
+    "resourceName": "amplifyvuealbum921b97fd",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [

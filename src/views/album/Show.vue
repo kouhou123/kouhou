@@ -61,15 +61,17 @@ export default {
     },
     async deletePhoto(index, photo) {
       if (!confirm("Delete Photo?")) return;
-       await Storage.remove(photo.s3key, {
-         level: "private",
-       })
-         .then((result) => {
-           console.log(result);
-         })
-         .catch((error) => {
-           console.log(error);
-         });
+
+      await Storage.remove(photo.s3key, {
+        level: "private",
+      })
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
       await API.graphql({
         query: deletePhoto,
         variables: { input: { id: photo.id } },
@@ -86,8 +88,8 @@ export default {
 };
 </script>
 
- <style scoped>
- amplify-s3-image {
-   --height: 100px;
- }
- </style>
+<style scoped>
+amplify-s3-image {
+  --height: 100px;
+}
+</style>
